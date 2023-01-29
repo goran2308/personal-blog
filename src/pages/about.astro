@@ -1,6 +1,5 @@
 ---
-const pageTitle = 'About Me';
-
+import DefaultLayout from "../layouts/defaultLayout.astro";
 const identity = {
   firstName: 'Goran',
   country: 'United Kingdom',
@@ -14,17 +13,7 @@ const happy = true;
 const finished = false;
 const goal = 3;
 ---
-<html lang="en">
-  <head>
-    <meta charset ="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <h1>{pageTitle}</h1>
+  <DefaultLayout title='About Me'>
     <h2>... and my new Astro site!</h2>
 
     {happy && <p>I am happy to be learning Astro</p>}
@@ -41,5 +30,4 @@ const goal = 3;
     <ul>
       {skills.map((skill) => <li>{skill}</li>)}  
     </ul>
-  </body>
-</html>
+  </DefaultLayout>
