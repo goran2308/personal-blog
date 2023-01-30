@@ -7,6 +7,8 @@ description: "After learning some Astro, I couldn't stop!"
 image:
   url: "https://astro.build/assets/blog/astro-showcase/astro-showcase-screenshot.jpg"
   alt: "Thumbnails of websites from the Astro Showcase site."
+
+  # add my own tags here
 tags: ["astro", "blogging", "learning in public", "successes"]
 ---
 
