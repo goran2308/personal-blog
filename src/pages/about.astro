@@ -1,33 +1,59 @@
 ---
-import DefaultLayout from "../layouts/defaultLayout.astro";
+import DefaultLayout from "../layouts/defaultLayout.astro"
+
 const identity = {
-  firstName: 'Goran',
-  country: 'United Kingdom',
-  occupation: 'Web Developer',
-  hobbies: ['photography', 'coding', 'cycling'],
-};
+  firstName: "Goran",
+  country: "United Kingdom",
+  occupation: "Web Developer",
+  hobbies: ["photography", "coding", "cycling"],
+}
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"]
 
-const happy = true;
-const finished = false;
-const goal = 3;
+const happy = true
+const finished = false
+const goal = 3
+
+const skillColor = "navy",
+  fontWeight = "bold",
+  textCase = "uppercase"
 ---
-  <DefaultLayout title='About Me'>
-    <h2>... and my new Astro site!</h2>
 
-    {happy && <p>I am happy to be learning Astro</p>}
-    {finished && <p>I finished this tutorial!</p>}
-    {goal === 3 ? <p>My goal is to finish in 3 days!</p> : <p>My goal is not 3 days!</p>}
+<DefaultLayout pageTitle="About Me">
+  <h2>... and my new Astro site!</h2>
 
-    <p>Here are few facts about me:</p>
-    <ul>
-      <li>My name is {identity.firstName}.</li>
-      <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-      {identity.hobbies.length >=2 && <li>two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>}
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-      {skills.map((skill) => <li>{skill}</li>)}  
-    </ul>
-  </DefaultLayout>
+  {happy && <p>I am happy to be learning Astro</p>}
+  {finished && <p>I finished this tutorial!</p>}
+  {
+    goal === 3 ? (
+      <p>My goal is to finish in 3 days!</p>
+    ) : (
+      <p>My goal is not 3 days!</p>
+    )
+  }
+
+  <p>Here are few facts about me:</p>
+  <ul>
+    <li>My name is {identity.firstName}.</li>
+    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+    {
+      identity.hobbies.length >= 2 && (
+        <li>
+          two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
+        </li>
+      )
+    }
+  </ul>
+  <p>My skills are:</p>
+  <ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+  </ul>
+</DefaultLayout>
+
+<style define:vars={{ skillColor, fontWeight, textCase }}>
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style>
