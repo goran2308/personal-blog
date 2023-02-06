@@ -2,9 +2,24 @@
 import Social from "./Social.astro"
 ---
 
-<footer>
-  <p>
-    <Social platform="GitHub" username="goran2308" />
-    <Social platform="LinkedIn" username="/in/goran-solev-5a5bb487" />
-  </p>
+<footer class="pb-10 pt-[100px]">
+  <div>
+    <div class="flex flex-row justify-center">
+      <!-- Props: platform, username, icon -->
+      <Social platform="github" username="goran2308" icon="iconoir:github" />
+      <Social
+        platform="linkedin"
+        username="/in/goran-solev-5a5bb487"
+        icon="uit:linkedin-alt"
+      />
+    </div>
+    <small class="block text-center mt-2"
+      >Goran Solev &#169; <span id="year"></span></small
+    >
+  </div>
 </footer>
+
+<script>
+  let currentYear: HTMLElement = document.getElementById("year")
+  currentYear.innerHTML = new Date().getFullYear().toString()
+</script>

@@ -12,9 +12,9 @@ const myName = "Goran Solev"
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle + " | " + myName}</title>
   </head>
-  <body class="max-w-2xl mx-auto">
+  <body class="max-w-2xl mx-auto flex flex-col h-screen">
     <Header />
-    <main>
+    <main class="grow">
       <h1 class="text-2xl leading-loose">{h1Title}</h1>
       <article class="leading-[1.75rem]">
         <slot />
