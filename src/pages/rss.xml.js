@@ -7,5 +7,6 @@ export async function get() {
     site: "https://goransolev1.netlify.app/",
     items: await pagesGlobToRssItems(import.meta.glob("./**/*.md")),
     customData: `<language>en-us</language>`,
+    stylesheet: "rss/rss-styles.xsl",
   })
 }
