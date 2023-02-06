@@ -2,14 +2,22 @@
 import DefaultLayout from "../layouts/defaultLayout.astro"
 ---
 
-<DefaultLayout pageTitle="Home Page">
+<DefaultLayout pageTitle="Home" h1Title="Hi there,">
   <p>
-    I am working through Astro's introductory tutorial. This is the second page
-    on my website, and it's the first one I built myself!
+    I am <span>Goran</span>, the owner and writer on this blog. I hope you will
+    find the solution of your coding problems and learn new stuff while spending
+    time here.
   </p>
-
+  <br />
   <p>
-    This site will update as I complete more of the tutorial, so keep checking
-    back and see how my journey is going!
+    I have a new post every couple of weeks, so make sure you stay updated by
+    following my RSS feed. Have fun!
   </p>
+  <br />
 </DefaultLayout>
+
+<style>
+  span {
+    background-color: rgb(175, 255, 228);
+  }
+</style>
