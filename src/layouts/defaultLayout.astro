@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
+import { SEO } from "astro-seo"
 
 const { pageTitle, h1Title } = Astro.props
 const myName = "Goran Solev"
@@ -8,9 +9,12 @@ const myName = "Goran Solev"
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{pageTitle + " | " + myName}</title>
+    <SEO
+      title={pageTitle + " | " + myName}
+      description="Goran Solev | Personal website and blog"
+      charset="utf-8"
+    />
   </head>
   <body class="max-w-2xl mx-auto flex flex-col h-screen">
     <Header />

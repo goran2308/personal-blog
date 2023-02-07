@@ -14,12 +14,8 @@ import Social from "./Social.astro"
       />
     </div>
     <small class="block text-center mt-2"
-      >Goran Solev &#169; <span id="year"></span></small
+      >Goran Solev &#169; <span>{new Date().getFullYear().toString()}</span
+      ></small
     >
   </div>
 </footer>
-
-<script>
-  let currentYear: HTMLElement = document.getElementById("year")
-  currentYear.innerHTML = new Date().getFullYear().toString()
-</script>
