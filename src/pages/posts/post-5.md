@@ -1,15 +1,15 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My first blog post
+title: My fifth blog post
 author: Goran Solev
-pubDate: January 1, 2023
+pubDate: February 2, 2023
 description: This is the first post of my new Astro blog
 image:
   url: "https://astro.build/assets/blog/astro-1-release-update/cover.jpeg"
   alt: "The Astro logo with the word One"
 
   # add my own tags here
-tags: ["html"]
+tags: ["node"]
 ---
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.

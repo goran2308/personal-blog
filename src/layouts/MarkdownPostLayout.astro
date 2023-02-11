@@ -4,7 +4,10 @@ const { frontmatter } = Astro.props
 ---
 
 <DefaultLayout pageTitle={frontmatter.title}>
-  <img src={frontmatter.image.url} width="500" alt={frontmatter.image.alt} />
+  <p class="mb-2">
+    <a href="/all">&larr;All posts</a>
+  </p>
+  <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
   <div>
     {
       frontmatter.tags.map((tag) => (
@@ -24,3 +27,9 @@ const { frontmatter } = Astro.props
 
   <slot />
 </DefaultLayout>
+
+<style>
+  a {
+    text-decoration: underline;
+  }
+</style>

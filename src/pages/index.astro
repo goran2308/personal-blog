@@ -1,5 +1,8 @@
 ---
 import DefaultLayout from "../layouts/defaultLayout.astro"
+import BlogPost from "../components/BlogPost.astro"
+
+const allPosts = await Astro.glob("../pages/posts/*.md")
 ---
 
 <DefaultLayout pageTitle="Home" h1Title="Hi there!">
@@ -13,11 +16,42 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
     I publish a new post <span> every two weeks</span>. Stay updated and follow
     my blog!
   </p>
-  <br />
+
+  <div class="mt-[70px]">
+    <h3 class="font-medium leading-tight text-3xl mb-6">Latest:</h3>
+    <table>
+      <tbody>
+        {
+          allPosts
+            .sort(
+              (a, b) =>
+                Date.parse(b.frontmatter.pubDate) -
+                Date.parse(a.frontmatter.pubDate)
+            )
+            .map((post) => (
+              <BlogPost
+                url={post.url}
+                title={post.frontmatter.title}
+                date={post.frontmatter.pubDate}
+                tag={post.frontmatter.tags}
+              />
+            ))
+            .slice(0, 5)
+        }
+      </tbody>
+    </table>
+  </div>
+  <p class="mt-6">
+    <a href="/all">All posts &rarr;</a>
+  </p>
 </DefaultLayout>
 
 <style>
   span {
     background-color: rgb(175, 255, 228);
+  }
+
+  a {
+    text-decoration: underline;
   }
 </style>

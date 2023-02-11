@@ -1,5 +1,22 @@
 ---
-const {url, title} = Astro.props
+const { url, title, date, tag } = Astro.props
 ---
 
-<li><a href={url}>{title}</a></li>
+<tr>
+  <td class="w-40 pr-2"
+    ><code class="text-sm whitespace-normal p-1 bg-[#AFFFE4]">{date}</code><a
+      href={`/tags/${tag}`}
+      class="whitespace-nowrap overflow-hidden sm:hidden block">{tag}</a
+    ></td
+  >
+  <td class="text-sm whitespace-normal px-4 hidden sm:table-cell"
+    ><a href={`/tags/${tag}`}>{tag}</a></td
+  >
+  <td class="pl-2 py-1"><a href={url} class="break-words">{title}</a></td>
+</tr>
+
+<style>
+  a {
+    text-decoration: underline;
+  }
+</style>
