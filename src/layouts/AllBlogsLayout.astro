@@ -1,5 +1,4 @@
 ---
-import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import { SEO } from "astro-seo"
 
@@ -16,12 +15,12 @@ const myName = "Goran Solev"
       charset="utf-8"
     />
   </head>
-  <body class="max-w-2xl mx-auto flex flex-col h-screen px-8">
-    <p class="mb-2 mt-24">
+  <body class="mx-auto flex flex-col h-screen px-8">
+    <p class="mt-24">
       <a href="/">&larr; goransolev.com</a>
     </p>
     <main class="grow">
-      <h1 class="font-medium leading-tight text-5xl mb-6">{h1Title}</h1>
+      <h1 class="font-medium"><span>{h1Title}</span></h1>
 
       <slot />
       <!-- the content is injected here -->

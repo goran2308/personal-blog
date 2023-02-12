@@ -1,0 +1,59 @@
+body {
+  font-size: 18px;
+  max-width: 48rem;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 4rem;
+  /* background-color: #0e273c;
+  color: #fff; */
+  padding: 2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+hr {
+  background-color: #0e273c;
+  border: none;
+  height: 2px;
+  margin-top: 0.5rem;
+}
+
+pre,
+code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background-color: #0e273c !important;
+}
+
+code {
+  color: #fff;
+  padding: 2px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+.astro-code {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+}
+
+a {
+  text-decoration: underline;
+}
+
+span {
+  background-color: #0e273c;
+  color: #fff;
+  padding: 2px;
+}

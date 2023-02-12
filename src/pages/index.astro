@@ -7,15 +7,12 @@ const allPosts = await Astro.glob("../pages/posts/*.md")
 
 <DefaultLayout pageTitle="Home" h1Title="Hi there!">
   <p>
-    I am <span>Goran</span>, the owner and writer on this blog. I hope you will
-    find the solution for your coding problems and learn new stuff while
-    spending your time here and reading my blog posts.
+    I am Goran, the owner and writer on this blog. I hope you will find the
+    solution for your coding problems and learn new stuff while spending your
+    time here and reading my blog posts.
   </p>
   <br />
-  <p>
-    I publish a new post <span> every two weeks</span>. Stay updated and follow
-    my blog!
-  </p>
+  <p>I publish a new post every two weeks. Stay updated and follow my blog!</p>
 
   <div class="mt-[70px]">
     <h3 class="font-medium leading-tight text-3xl mb-6">Latest:</h3>
@@ -45,13 +42,3 @@ const allPosts = await Astro.glob("../pages/posts/*.md")
     <a href="/all">All posts &rarr;</a>
   </p>
 </DefaultLayout>
-
-<style>
-  span {
-    background-color: rgb(175, 255, 228);
-  }
-
-  a {
-    text-decoration: underline;
-  }
-</style>
