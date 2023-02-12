@@ -6,8 +6,9 @@ body {
 h1 {
   font-size: 3em;
   line-height: 4rem;
-  /* background-color: #0e273c;
-  color: #fff; */
+}
+
+h1 > span {
   padding: 2px;
 }
 
@@ -55,5 +56,4 @@ a {
 span {
   background-color: #0e273c;
   color: #fff;
-  padding: 2px;
 }
