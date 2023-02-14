@@ -4,8 +4,8 @@ body {
 }
 
 h1 {
-  font-size: 3em;
-  line-height: 4rem;
+  font-size: 3em !important;
+  line-height: 4rem !important;
 }
 
 h1 > span {
@@ -50,7 +50,7 @@ code {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 span {
