@@ -6,11 +6,17 @@ import Social from "./Social.astro"
   <div>
     <div class="flex flex-row justify-center">
       <!-- Props: platform, username, icon -->
-      <Social platform="github" username="goran2308" icon="iconoir:github" />
+      <Social
+        platform="github"
+        username="goran2308"
+        icon="iconoir:github"
+        ariaLabel="Go to my GitHub profile"
+      />
       <Social
         platform="linkedin"
         username="/in/goran-solev-5a5bb487"
         icon="uit:linkedin-alt"
+        ariaLabel="Go to my LinkedIn profile"
       />
     </div>
     <small class="block text-center mt-2"
