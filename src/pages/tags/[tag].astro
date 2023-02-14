@@ -1,7 +1,6 @@
 ---
 import TagLayout from "../../layouts/TagLayout.astro"
 import BlogPost from "../../components/BlogPost.astro"
-import "../../styles/global.css"
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob("../posts/*.md")
