@@ -1,5 +1,5 @@
 ---
-import DefaultLayout from "../../layouts/defaultLayout.astro"
+import TagLayout from "../../layouts/TagLayout.astro"
 import BlogPost from "../../components/BlogPost.astro"
 
 export async function getStaticPaths() {
@@ -24,13 +24,23 @@ const { tag } = Astro.params
 const { posts } = Astro.props
 ---
 
-<DefaultLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
-  <ul>
+<TagLayout pageTitle={tag} h1Title={tag}>
+  <table>
     {
-      posts.map((post) => (
-        <BlogPost url={post.url} title={post.frontmatter.title} />
-      ))
+      posts
+        .sort(
+          (a, b) =>
+            Date.parse(b.frontmatter.pubDate) -
+            Date.parse(a.frontmatter.pubDate)
+        )
+        .map((post) => (
+          <BlogPost
+            url={post.url}
+            title={post.frontmatter.title}
+            date={post.frontmatter.pubDate}
+            tag={post.frontmatter.tags}
+          />
+        ))
     }
-  </ul>
-</DefaultLayout>
+  </table>
+</TagLayout>

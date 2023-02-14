@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro"
+import TopLink from "../components/TopLink.astro"
 import { SEO } from "astro-seo"
 
 const { pageTitle, h1Title } = Astro.props
@@ -16,14 +17,10 @@ const myName = "Goran Solev"
     />
   </head>
   <body class="mx-auto flex flex-col h-screen px-8">
-    <p class="mt-24">
-      <a href="/">&larr; goransolev.com</a>
-    </p>
+    <TopLink url="/" arrow="←" text="goransolev.com" />
     <main class="grow">
       <h1 class="font-medium"><span>{h1Title}</span></h1>
-
       <slot />
-      <!-- the content is injected here -->
     </main>
     <Footer />
   </body>

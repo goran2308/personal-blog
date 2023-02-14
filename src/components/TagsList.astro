@@ -1,0 +1,19 @@
+---
+const allPosts = await Astro.glob("../pages/posts/*.md")
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())]
+---
+
+<ul class="flex flex-row flex-wrap">
+  {
+    tags.map((tag) => (
+      <li>
+        <a
+          href={`/tags/${tag}`}
+          class="bg-[#0e273c] text-white mr-2 no-underline px-3 py-1"
+        >
+          {tag}
+        </a>
+      </li>
+    ))
+  }
+</ul>

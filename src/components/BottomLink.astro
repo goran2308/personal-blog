@@ -1,0 +1,10 @@
+---
+const { url, arrow, text } = Astro.props
+---
+
+<!-- url: is takinng the path
+     arrow: is taking &larr; or &rarr; (left or rigth arrow)
+     text: is taking the link text -->
+<p class="mt-2">
+  <a href={url}>{text} {arrow}</a>
+</p>

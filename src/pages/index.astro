@@ -1,18 +1,18 @@
 ---
 import DefaultLayout from "../layouts/defaultLayout.astro"
 import BlogPost from "../components/BlogPost.astro"
+import BottomLink from "../components/BottomLink.astro"
 
 const allPosts = await Astro.glob("../pages/posts/*.md")
 ---
 
 <DefaultLayout pageTitle="Home" h1Title="Hi there!">
   <p>
-    I am Goran, the owner and writer on this blog. I hope you will find the
-    solution for your coding problems and learn new stuff while spending your
-    time here and reading my blog posts.
+    I am Goran, the writer on this blog. I hope you will find the solution for
+    your coding problems and learn new stuff while reading my blog posts.
   </p>
   <br />
-  <p>I publish a new post every two weeks. Stay updated and follow my blog!</p>
+  <p>I publish a new post every two weeks. Stay tuned and follow my blog!</p>
 
   <div class="mt-[70px]">
     <h2 class="font-medium leading-tight text-3xl">Latest:</h2>
@@ -38,7 +38,5 @@ const allPosts = await Astro.glob("../pages/posts/*.md")
       </tbody>
     </table>
   </div>
-  <p class="mt-6">
-    <a href="/all">All posts &rarr;</a>
-  </p>
+  <BottomLink url="/all" arrow="→" text="All posts" />
 </DefaultLayout>
