@@ -7,7 +7,7 @@ description: Explanation of how important the semantic HTML code is and all the 
 tags: ["html"]
 ---
 
-<u>_If you are asking yourself do you need to learn HTML before anything else on your path to become a web developer, the only correct answer is **YES**!_</u>
+*If you are asking yourself do you need to learn HTML before anything else on your path to become a web developer, the only correct answer is **YES**!*
 
 <br />
 
@@ -87,7 +87,7 @@ If you are new to HTML, this article gives you the basics of all the practices w
 
 <br />
 
-### Additional reading:
+#### Additional reading:
 
 [w3schools.com | HTML Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp "HTML Semantic Elements")
 

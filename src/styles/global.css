@@ -3,23 +3,48 @@ body {
   max-width: 48rem !important;
 }
 
-h1 {
-  font-size: 3em !important;
-  line-height: 4rem !important;
-}
-
-h1 > span {
-  padding: 2px !important;
-}
-
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 3.052rem !important;
+  line-height: 4.25rem !important;
   margin-top: 0.5rem !important;
   margin-bottom: 1.5rem !important;
+}
+
+h1 > span {
+  padding: 2px;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
 }
 
 hr {
@@ -27,6 +52,10 @@ hr {
   border: none;
   height: 2px;
   margin-top: 0.5rem;
+}
+
+img {
+  margin: 1rem 0;
 }
 
 pre,

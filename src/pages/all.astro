@@ -7,9 +7,9 @@ const allPosts = await Astro.glob("../pages/posts/*.md")
 ---
 
 <AllLayout pageTitle="All Posts" h1Title="All the posts:">
-  <h2 class="my-8 text-3xl font-medium leading-tight">Explore by tags:</h2>
+  <h2 class="my-8 leading-tight">Explore by tags:</h2>
   <TagsList />
-  <h2 class="my-8 text-3xl font-medium leading-tight">Explore by date:</h2>
+  <h2 class="my-8 leading-tight">Explore by date:</h2>
   <table>
     <tbody>
       {
