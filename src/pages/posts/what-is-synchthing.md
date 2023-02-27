@@ -72,9 +72,15 @@ This configuration will cover synchronisation between two devices, one "local de
 
 Open the admin GUI which is available on [http://localhost:8384](http://127.0.0.1:8384/) on your local device and the first thing you need to do is to accept the cookies if prompted to do because it is important for the browser.
 
+<br />
+
 On the left side is the list of folders and should be one already created for you called Default Folder which will be marked as "Unshared" since it isn't shared with any other device.
 
+<br />
+
 On the right side is the list of devices. This device section will show the information for the local device and the Remote section will list the devices connected to the local device.
+
+<br />
 
 Click on "Add remote device" in the bottom right corner of your local device. In the General tab on the local device add the Device ID from the remote device and save it. In the Sharing tab select the folder/folders that you want to be shared with the remote device.
 
