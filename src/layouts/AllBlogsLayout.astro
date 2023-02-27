@@ -1,37 +1,13 @@
 ---
+import Head from "../components/Head.astro"
 import Footer from "../components/Footer.astro"
 import TopLink from "../components/TopLink.astro"
-import { SEO } from "astro-seo"
 
-const { pageTitle, h1Title } = Astro.props
-const myName = "Goran Solev"
+const { h1Title } = Astro.props
 ---
 
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <SEO
-      title={pageTitle + " | " + myName}
-      description="Goran Solev | Personal website and blog"
-      charset="utf-8"
-    />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-  </head>
+  <Head pageTitle="All Posts" />
   <body class="mx-auto flex flex-col h-screen px-8">
     <TopLink url="/" arrow="←" text="goransolev.com" />
     <main class="grow">
