@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: The importance of writing a semantic HTML
 author: Goran Solev
-pubDate: February 12, 2023
+pubDate: Feb 12, 2023
 description: Explanation of how important the semantic HTML code is and all the benefits of doing it.
 tags: ["html"]
 ---
