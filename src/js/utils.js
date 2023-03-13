@@ -16,12 +16,12 @@ export function formatBlogPosts(
   } = {}
 ) {
   const filteredPosts = posts.reduce((acc, post) => {
-    const { date, draft } = post.frontmatter
+    const { pubDate, draft } = post.frontmatter
     // filterOutDrafts if true
     if (filterOutDrafts && draft) return acc
 
     // filterOutFuturePosts if true
-    if (filterOutFuturePosts && new Date(date) > new Date()) return acc
+    if (filterOutFuturePosts && new Date(pubDate) > new Date()) return acc
 
     // add post to acc
     acc.push(post)
