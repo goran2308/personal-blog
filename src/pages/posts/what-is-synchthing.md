@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: What is Synchthing?
 author: Goran Solev
-pubDate: Feb 25, 2023
+pubDate: 2023-02-25
 description: Sychthing and the benefits using it.
 tags: ["tools"]
 ---

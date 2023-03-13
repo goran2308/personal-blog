@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Arrays in JavaScript
 author: Goran Solev
-pubDate: Mar 6, 2023
+pubDate: 2023-03-06
 description: What are arrays in JavaScript? Learn how to manipulate the JavaScript arrays the right way!
 tags: ["javascript"]
 ---

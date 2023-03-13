@@ -3,6 +3,8 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
 import BlogPost from "../components/BlogPost.astro"
 import BottomLink from "../components/BottomLink.astro"
 
+import { formatDate } from "../js/utils"
+
 const allPosts = await Astro.glob("../pages/posts/*.md")
 ---
 
@@ -29,7 +31,7 @@ const allPosts = await Astro.glob("../pages/posts/*.md")
               <BlogPost
                 url={post.url}
                 title={post.frontmatter.title}
-                date={post.frontmatter.pubDate}
+                date={formatDate(post.frontmatter.pubDate)}
                 tag={post.frontmatter.tags}
               />
             ))
