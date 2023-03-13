@@ -3,9 +3,13 @@ import DefaultLayout from "../layouts/defaultLayout.astro"
 import BlogPost from "../components/BlogPost.astro"
 import BottomLink from "../components/BottomLink.astro"
 
-import { formatDate } from "../js/utils"
+import { formatDate, formatBlogPosts } from "../js/utils"
 
 const allPosts = await Astro.glob("../pages/posts/*.md")
+
+const formattedPosts = formatBlogPosts(allPosts, {
+  limit: 5,
+})
 ---
 
 <DefaultLayout h1Title="Hi there!">
@@ -21,21 +25,14 @@ const allPosts = await Astro.glob("../pages/posts/*.md")
     <table>
       <tbody>
         {
-          allPosts
-            .sort(
-              (a, b) =>
-                Date.parse(b.frontmatter.pubDate) -
-                Date.parse(a.frontmatter.pubDate)
-            )
-            .map((post) => (
-              <BlogPost
-                url={post.url}
-                title={post.frontmatter.title}
-                date={formatDate(post.frontmatter.pubDate)}
-                tag={post.frontmatter.tags}
-              />
-            ))
-            .slice(0, 5)
+          formattedPosts.map((post) => (
+            <BlogPost
+              url={post.url}
+              title={post.frontmatter.title}
+              date={formatDate(post.frontmatter.pubDate)}
+              tag={post.frontmatter.tags}
+            />
+          ))
         }
       </tbody>
     </table>

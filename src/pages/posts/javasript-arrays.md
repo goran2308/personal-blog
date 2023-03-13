@@ -5,6 +5,7 @@ author: Goran Solev
 pubDate: 2023-03-06
 description: What are arrays in JavaScript? Learn how to manipulate the JavaScript arrays the right way!
 tags: ["javascript"]
+draft: false
 ---
 
 *Arrays in JavaScript are defined as a collection of elements of any type. They are represented as a pair of square brackets [ ] and all the elements are comma (,) separated.*
@@ -16,10 +17,8 @@ tags: ["javascript"]
 Arrays are used to store a list of items. This means that if you want to store colours in a single variables this will look like:
 
 ```javascript
-let colour1 = "blue";
-
+let colour1 = "blue"
 let colour2 = "green";
-
 let colour3 = "yellow";
 ```
 
@@ -45,9 +44,7 @@ You can also create the array and provide the elements after:
 const colours = [];
 
 colour[0] = "blue";
-
 colour[1] = "green";
-
 colour[2] = "yellow";
 ```
 
@@ -58,7 +55,6 @@ const colours = new Array("blue", "green", "yellow");
 ```
 
 >For the simplicity and readability it is recommended to implement the first method.
->TTTest ttest
 
 <br />
 
@@ -79,11 +75,8 @@ Using the index to list them one by one:
 ```javascript
 const colours = ["blue", "green", "yellow"];
 
-
 colours[0]; // blue
-
 colours[1]; // green
-
 colours[2]; // yellow
 ```
 
@@ -92,12 +85,9 @@ You can use a regular **for** or **forEach** loop as well like this:
 ```javascript
 const colours = ["blue", "green", "yellow"];
 
-
-  for(let i=0; i<colours.length; i++;) {
-
-    console.log(`The colour at index ${i} is ${colours[i]}`);
-
-  }
+for(let i=0; i<colours.length; i++;) {
+  console.log(`The colour at index ${i} is ${colours[i]}`);
+}
 ```
 
 <br />

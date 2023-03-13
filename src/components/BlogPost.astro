@@ -1,10 +1,12 @@
 ---
+import { formatDate } from "../js/utils"
+
 const { url, title, date, tag } = Astro.props
 ---
 
 <tr>
   <td class="w-32"
-    ><code class="text-sm whitespace-normal p-1">{date}</code><a
+    ><code class="text-sm whitespace-normal p-1">{formatDate(date)}</code><a
       href={`/tags/${tag}`}
       class="whitespace-nowrap overflow-hidden sm:hidden block">{tag}</a
     ></td

@@ -4,6 +4,8 @@ import TopLink from "../components/TopLink.astro"
 import { SEO } from "astro-seo"
 import "../styles/global.css"
 
+import { formatDate } from "../js/utils"
+
 const myName = "Goran Solev"
 const { frontmatter } = Astro.props
 ---
@@ -47,7 +49,7 @@ const { frontmatter } = Astro.props
         ))
       }
 
-      <p class="mb-12">Published on: {frontmatter.pubDate}</p>
+      <p class="mb-12">Published on: {formatDate(frontmatter.pubDate)}</p>
 
       <slot />
     </main>
