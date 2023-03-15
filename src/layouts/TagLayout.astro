@@ -4,6 +4,11 @@ import Footer from "../components/Footer.astro"
 import TopLink from "../components/TopLink.astro"
 import { SEO } from "astro-seo"
 
+interface Props {
+  pageTitle: string
+  h1Title: string
+}
+
 const { pageTitle, h1Title } = Astro.props
 const myName = "Goran Solev"
 ---
