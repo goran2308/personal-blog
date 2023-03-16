@@ -1,12 +1,11 @@
 ---
-const { url, arrow, text } = Astro.props
+import { Icon } from "astro-icon"
+
+const { url, text } = Astro.props
 ---
 
-{
-  /* url: is takinng the path
-     arrow: is taking &larr; or &rarr; (left or rigth arrow)
-     text: is taking the link text */
-}
 <p class="mt-2">
-  <a href={url}>{text} {arrow}</a>
+  <a href={url} class="flex"
+    >{text}<Icon name="carbon:arrow-right" class="w-[20px] ml-2" /></a
+  >
 </p>
