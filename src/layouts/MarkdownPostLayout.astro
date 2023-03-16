@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro"
 import TopLink from "../components/TopLink.astro"
+import PTscript from "../components/PTscript.astro"
 import { SEO } from "astro-seo"
 import "../styles/global.css"
 
@@ -34,7 +35,9 @@ const { frontmatter } = Astro.props
       href="/icons/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
+    <PTscript />
   </head>
+
   <body class="mx-auto flex flex-col h-screen px-8">
     <TopLink url="/all" arrow="←" text="All posts" />
     <h1><span>{frontmatter.title}</span></h1>
