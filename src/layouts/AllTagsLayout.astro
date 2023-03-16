@@ -13,13 +13,14 @@ const { h1Title } = Astro.props
     <p class="mt-24">
       <a href="/">&larr; goransolev.com</a>
     </p>
+
     <main class="grow">
       <h1><h1>{h1Title}</h1></h1>
       <div>
         <slot />
       </div>
-
-      <Footer />
     </main>
+
+    <Footer />
   </body>
 </html>

@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Red+Hat+Mono&display=swap");
+
+:root {
+  --main-font: "Inter", sans-serif;
+  --code-font: "Red Hat Mono", monospace;
+}
+
 body {
-  font-size: 18px !important;
+  font-family: var(--main-font);
+  font-size: 18px;
   max-width: 48rem !important;
+  color: #1b1b1b;
 }
 
 h2,
@@ -60,6 +69,7 @@ img {
 
 pre,
 code {
+  font-family: var(--code-font);
   white-space: pre-wrap;
   overflow-wrap: anywhere;
   background-color: #0e273c !important;
