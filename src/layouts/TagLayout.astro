@@ -3,6 +3,7 @@ import "../styles/global.css"
 import Footer from "../components/Footer.astro"
 import TopLink from "../components/TopLink.astro"
 import { SEO } from "astro-seo"
+import PTscript from "../components/PTscript.astro"
 
 interface Props {
   pageTitle: string
@@ -37,6 +38,7 @@ const myName = "Goran Solev"
       href="/icons/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
+    <PTscript />
   </head>
 
   <body class="mx-auto flex flex-col h-screen px-8">
