@@ -102,8 +102,6 @@ In the next article I will show you how to manipulate the arrays using the array
 
 #### Additional reading:
 
-[developer.mozilla.org | Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-
-[javascript.info | Arrays](https://javascript.info/array)
-
-[freecodecamp.org | The JavaScript Array Handbook](https://www.freecodecamp.org/news/the-javascript-array-handbook/)
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">developer.mozilla.org | Arrays</a> <br />
+<a href="https://javascript.info/array" target="_blank">javascript.info | Arrays</a> <br />
+<a href="https://www.freecodecamp.org/news/the-javascript-array-handbook/" target="_blank">freecodecamp.org | The JavaScript Array Handbook</a>

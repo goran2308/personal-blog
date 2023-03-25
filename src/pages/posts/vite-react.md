@@ -112,8 +112,6 @@ Happy hacking!
 
 ### Additional reading:
 
-[vitejs.dev| Why Vite](https://vitejs.dev/guide/why.html "Why Vite")
-
-[telerik.com | What is Vite: The guide to Modern and Super-Fast Project Tooling](https://www.telerik.com/blogs/whats-vite-guide-modern-super-fast-project-tooling "SWhat is Vite: The guide to Modern and Super-Fast Project Tooling")
-
-[vueschool.io | Introduction to Vite for Vue Developers](https://vueschool.io/articles/news/introduction-to-vite-for-vue-developers/ "Introduction to Vite for Vue Developers")
+<a href="https://vitejs.dev/guide/why.html" target="_blank">vitejs.dev | Why Vite</a> <br />
+<a href="https://www.telerik.com/blogs/whats-vite-guide-modern-super-fast-project-tooling" target="_blank">telerik.com | What is Vite: The guide to Modern and Super-Fast Project Tooling</a> <br />
+<a href="https://vueschool.io/articles/news/introduction-to-vite-for-vue-developers/" target="_blank">vueschool.io | Introduction to Vite for Vue Developers</a>

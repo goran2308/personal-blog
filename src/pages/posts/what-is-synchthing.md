@@ -98,8 +98,6 @@ After this, the remote device will show up on your right side as a disconnected 
 
 #### Additional reading:
 
-[docs.synchthing.net | Synchthing Official Docs](https://docs.syncthing.net/intro/getting-started.html)
-
-[github.com | Synchthing Windows Setup](https://github.com/Bill-Stewart/SyncthingWindowsSetup)
-
-[proprivacy.com | Synchthing Review](https://proprivacy.com/cloud/review/syncthing)
+<a href="https://docs.syncthing.net/intro/getting-started.html" target="_blank">docs.synchthing.net | Synchthing Official Docs</a> <br />
+<a href="https://github.com/Bill-Stewart/SyncthingWindowsSetup" target="_blank">github.com | Synchthing Windows Setup</a> <br />
+<a href="https://proprivacy.com/cloud/review/syncthing" target="_blank">proprivacy.com | Synchthing Review</a>

@@ -90,8 +90,6 @@ If you are new to HTML, this article gives you the basics of all the practices w
 
 #### Additional reading:
 
-[w3schools.com | HTML Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp "HTML Semantic Elements")
-
-[freecodecamp.org | Semantic HTML5 Elements Explained](https://www.freecodecamp.org/news/semantic-html5-elements "Semantic HTML5 Elements Explained")
-
-[web.dev | Semantic HTML](https://web.dev/learn/html/semantic-html "Semantic HTML")
+<a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">w3schools.com | HTML Semantic Elements</a> <br />
+<a href="https://www.freecodecamp.org/news/semantic-html5-elements" target="_blank">freecodecamp.org | Semantic HTML5 Elements Explained</a> <br />
+<a href="https://web.dev/learn/html/semantic-html" target="_blank">web.dev | Semantic HTML</a>
