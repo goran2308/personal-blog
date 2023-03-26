@@ -24,6 +24,30 @@ import { Icon } from "astro-icon"
     opacity: 1;
     visibility: visible;
   }
+
+  @media screen and (max-width: 2560px) {
+    #backtop {
+      right: 25%;
+    }
+  }
+
+  @media screen and (min-width: 1535px) and (max-width: 1920px) {
+    #backtop {
+      right: 10%;
+    }
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1536px) {
+    #backtop {
+      right: 7%;
+    }
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 1024px) {
+    #backtop {
+      display: none;
+    }
+  }
 </style>
 
 <script>
