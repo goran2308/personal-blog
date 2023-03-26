@@ -1,0 +1,51 @@
+---
+import { Icon } from "astro-icon"
+---
+
+<button id="backtop"><Icon name="carbon:arrow-up" class="w-[30px]" /></button>
+
+<style>
+  #backtop {
+    position: fixed;
+    bottom: 10%;
+    right: 15%;
+    border: 2px solid #0e273c;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: visibility 0.3s, opacity 0.3s;
+  }
+
+  #backtop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+</style>
+
+<script>
+  const bttButton = document.querySelector("#backtop")
+
+  const toTop = () =>
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    })
+
+  bttButton.addEventListener("click", toTop)
+
+  const toggleTop = () => {
+    if (window.scrollY >= 100) {
+      bttButton.classList.add("show")
+    } else {
+      bttButton.classList.remove("show")
+    }
+  }
+
+  window.addEventListener("scroll", toggleTop)
+  window.addEventListener("resize", toggleTop)
+</script>
