@@ -1,14 +1,18 @@
 @font-face {
   font-family: "Inter";
-  src: url("/assets/fonts/Inter.ttf") format("truetype");
-  unicode-range: U+0020-007F;
+  src: url("/assets/fonts/Inter-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Red Hat Mono";
-  src: url("/assets/fonts/RedHatMono.ttf") format("truetype");
-  unicode-range: U+0020-007F;
+  src: url("/assets/fonts/subset-RedHatMono-Regular.woff2") format("woff2"),
+    url("/assets/fonts/subset-RedHatMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
 
