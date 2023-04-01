@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap");
-
 @font-face {
   font-family: "Inter";
   src: url("/assets/fonts/Inter.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Red Hat Mono";
+  src: url("/assets/fonts/RedHatMono.ttf") format("truetype");
 }
 
 :root {
