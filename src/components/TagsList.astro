@@ -1,6 +1,11 @@
 ---
+import { formatBlogPosts } from "../js/utils"
+
 const allPosts = await Astro.glob("../pages/posts/*.md")
-const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())]
+const formattedPosts = formatBlogPosts(allPosts)
+const tags = [
+  ...new Set(formattedPosts.map((post) => post.frontmatter.tags).flat()),
+]
 ---
 
 <ul class="flex flex-row flex-wrap">
