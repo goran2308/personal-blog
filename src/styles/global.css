@@ -52,7 +52,7 @@ h1 {
   margin-bottom: 1.5rem !important;
 }
 
-h1 > span {
+h1>span {
   padding: 2px;
 }
 
@@ -120,4 +120,23 @@ blockquote {
   line-height: 1.5em;
   padding: 2px;
   border-radius: 5px;
+}
+
+input {
+  border: 1px solid #1b1b1b;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #0E273C;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #173f5f;
 }
