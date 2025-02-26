@@ -1,0 +1,144 @@
+---
+import BackToTop from "../components/BackToTop.astro";
+import Footer from "../components/Footer.astro";
+import TopLink from "../components/TopLink.astro";
+import PTscript from "../components/PTscript.astro";
+import { SEO } from "astro-seo";
+import "../styles/global.css";
+
+import { formatDate } from "../js/utils";
+
+const myName = "Goran Solev";
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <SEO
+            title={frontmatter.title + " | " + myName}
+            description="Goran Solev | Personal website and blog"
+            charset="utf-8"
+        />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/icons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/icons/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <PTscript />
+    </head>
+
+    <body class="mx-auto flex flex-col h-screen px-8">
+        <TopLink url="/all" arrow="←" text="All posts" />
+        <h1><span>{frontmatter.title}</span></h1>
+
+        <main>
+            {
+                frontmatter.tags.map((tag) => (
+                    <p>
+                        Tag:
+                        <a href={`/tags/${tag}`}>{tag}</a>
+                    </p>
+                ))
+            }
+
+            <p class="mb-12">Published on: {formatDate(frontmatter.pubDate)}</p>
+
+            <slot />
+        </main>
+
+        <Footer />
+
+        <BackToTop />
+    </body>
+</html>
+
+<script>
+    window.onload = function () {
+        document.getElementById("form-button").click();
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const input = document.getElementById("dough-balls");
+        const button = document.getElementById("form-button");
+
+        button.addEventListener("click", () => {
+            const doughBalls = input.value;
+
+            const doughBallSize = 280;
+
+            const totalDough = doughBalls * doughBallSize;
+
+            const doughSalt = (totalDough * 1.64) / 100;
+
+            const biga = Math.round(totalDough * 0.52);
+            const poolish = Math.round(totalDough * 0.48);
+
+            //Biga ingredients
+            const bigaFlour = Math.round(biga * 0.6659);
+            const bigaWater = Math.round(biga * 0.333);
+            const bigaYeast = biga * 0.0011;
+
+            // Poolish ingredients
+            const poolishFlour = Math.round(poolish * 0.4995);
+            const poolishWater = Math.round(poolish * 0.4995);
+            const poolishYeast = poolish * 0.001;
+
+            // Biga outputs
+            const bigaFlourOutput = document
+                .querySelectorAll("#biga-flour-output")
+                .forEach((element) => {
+                    element.textContent = bigaFlour.toString() + "g";
+                });
+
+            const bigaWaterOutput = document
+                .querySelectorAll("#biga-water-output")
+                .forEach((element) => {
+                    element.textContent = bigaWater.toString() + "ml";
+                });
+
+            const bigaYeastOutput = document
+                .querySelectorAll("#biga-yeast-output")
+                .forEach((element) => {
+                    element.textContent = bigaYeast.toFixed(2).toString() + "g";
+                });
+
+            // Poolish outputs
+            const poolishFlourOutput = document
+                .querySelectorAll("#poolish-flour-output")
+                .forEach((element) => {
+                    element.textContent = poolishFlour.toString() + "g";
+                });
+
+            const poolishWaterOutput = document
+                .querySelectorAll("#poolish-water-output")
+                .forEach((element) => {
+                    element.textContent = poolishWater.toString() + "ml";
+                });
+
+            const poolishYeastOutput = document
+                .querySelectorAll("#poolish-yeast-output")
+                .forEach((element) => {
+                    element.textContent =
+                        poolishYeast.toFixed(2).toString() + "g";
+                });
+
+            const saltDoughOutput = document
+                .querySelectorAll("#salt-output")
+                .forEach((element) => {
+                    element.textContent = doughSalt.toFixed().toString() + "g";
+                });
+        });
+    });
+</script>
