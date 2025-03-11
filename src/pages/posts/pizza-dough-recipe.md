@@ -23,7 +23,7 @@ _Before you start making this recipe, make sure you have all the tools you will 
 
 <br />
 
-### Tools needed:
+## Tools needed:
 
 - <input type="checkbox"> Standing mixer
 - <input type="checkbox"> Measuring jugs
@@ -122,9 +122,9 @@ If you will make the pizza next day, keep both mixtures on room temperature for 
 
 <br />
 
-### The dough
+## The dough
 
-##### Additional ingredients:
+#### Additional ingredients:
 - Olive oil / Vegetable oil
 - Semolina or white flour
 
@@ -154,7 +154,7 @@ If you make the pizza on the same day, leave the balls on room temperature till 
 
 <br />
 
-### The pizza
+## The pizza
 
 If you had the pizza balls in the fridge, take them out at least 3 hours before you make the pizza. Leave them on room temperature for couple of hours.
 
@@ -174,6 +174,8 @@ Now when you have the shape of the base it is time for the toppings. The base to
 
 Time for baking! Put the pizza into the hot oven and see the magic happens. Keep a close look through the oven window. When the dough gets brownish with burned spots, it is time to take the pizza out of the oven. Don't depend on the time of the baking, use your eyes!
 
-### The final verdict
+<br />
+
+## The final verdict
 
 I've been practicing this recipe week after week for almost half a year now and has never let me down. I hope it will work for you too and you will enjoy delicious pizza every time. If you don't succeed the first time, keep trying till you make it work. It may take some time. When you master the recipe, try to improve it your way and experiment for amazing results. Enjoy!
