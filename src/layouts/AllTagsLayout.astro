@@ -1,15 +1,16 @@
 ---
-import Head from "../components/Head.astro"
-import Footer from "../components/Footer.astro"
-import "../styles/global.css"
+import Head from "../components/Head.astro";
+import Footer from "../components/Footer.astro";
+import Gtag2 from "../components/gtag2.astro";
+import "../styles/global.css";
 
-const { h1Title } = Astro.props
+const { h1Title } = Astro.props;
 ---
 
 <html lang="en">
   <Head />
-
   <body class="mx-auto flex flex-col h-screen px-8">
+    <Gtag2 />
     <p class="mt-24">
       <a href="/">&larr; goransolev.com</a>
     </p>

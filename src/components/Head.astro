@@ -1,12 +1,13 @@
 ---
-import { SEO } from "astro-seo"
-import PTscript from "./PTscript.astro"
+import { SEO } from "astro-seo";
+import PTscript from "./PTscript.astro";
 
-const { pageTitle } = Astro.props
-const myName = "Goran Solev"
+const { pageTitle } = Astro.props;
+const myName = "Goran Solev";
 ---
 
 <head>
+  <PTscript />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <SEO
     title={pageTitle + " | " + myName}
@@ -29,5 +30,4 @@ const myName = "Goran Solev"
     href="/icons/favicon-16x16.png"
   />
   <link rel="manifest" href="/site.webmanifest" />
-  <PTscript />
 </head>

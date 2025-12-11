@@ -1,14 +1,16 @@
 ---
-import Head from "../components/Head.astro"
-import Footer from "../components/Footer.astro"
-import TopLink from "../components/TopLink.astro"
+import Head from "../components/Head.astro";
+import Footer from "../components/Footer.astro";
+import TopLink from "../components/TopLink.astro";
+import Gtag2 from "../components/gtag2.astro";
 
-const { h1Title } = Astro.props
+const { h1Title } = Astro.props;
 ---
 
 <html lang="en">
   <Head pageTitle="All Posts" />
   <body class="mx-auto flex flex-col h-screen px-8">
+    <Gtag2 />
     <TopLink url="/" arrow="←" text="goransolev.com" />
     <main class="grow">
       <h1><span>{h1Title}</span></h1>
