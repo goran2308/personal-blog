@@ -3,7 +3,6 @@ import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import TopLink from "../components/TopLink.astro";
 import { SEO } from "astro-seo";
-import PTscript from "../components/PTscript.astro";
 
 interface Props {
   pageTitle: string;
@@ -38,7 +37,11 @@ const myName = "Goran Solev";
       href="/icons/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
-    <PTscript />
+    <script
+      defer
+      src="http://192.168.0.13:3003/script.js"
+      data-website-id="97495836-129a-430e-af03-6d2ef6cb3b94"></script>
+    S
   </head>
 
   <body class="mx-auto flex flex-col h-screen px-8">

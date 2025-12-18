@@ -3,19 +3,10 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
-import partytown from "@astrojs/partytown";
+import yeskunallumami from "@yeskunall/astro-umami";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-        debug: true,
-      },
-    }),
-  ],
+  integrations: [tailwind(), yeskunallumami()],
   site: "https://goransolev.com",
 });
