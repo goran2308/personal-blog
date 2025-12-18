@@ -1,13 +1,13 @@
 ---
-import AllLayout from "../layouts/AllBlogsLayout.astro"
-import BlogPost from "../components/BlogPost.astro"
-import TagsList from "../components/TagsList.astro"
+import AllLayout from "../layouts/AllBlogsLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+import TagsList from "../components/TagsList.astro";
 
-import { formatDate, formatBlogPosts } from "../js/utils"
+import { formatDate, formatBlogPosts } from "../js/utils";
 
-const allPosts = await Astro.glob("../pages/posts/*.md")
+const allPosts = await import.meta.glob("../pages/posts/*.md");
 
-const formattedPosts = formatBlogPosts(allPosts)
+const formattedPosts = await formatBlogPosts(allPosts);
 ---
 
 <AllLayout pageTitle="All Posts" h1Title="All the posts:">

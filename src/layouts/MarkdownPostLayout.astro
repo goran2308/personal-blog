@@ -11,6 +11,8 @@ import { formatDate } from "../js/utils";
 
 const myName = "Goran Solev";
 const { frontmatter } = Astro.props;
+const topLinkClasses = ["pt-24", "flex", "underline"];
+const topLinkClass = [...topLinkClasses];
 ---
 
 <html lang="en">
@@ -42,7 +44,7 @@ const { frontmatter } = Astro.props;
 
   <body class="mx-auto flex flex-col h-screen px-8">
     <Gtag2 />
-    <TopLink url="/all" arrow="←" text="All posts" />
+    <TopLink class="mt-24" url="/all" arrow="←" text="All posts" />
     <h1><span>{frontmatter.title}</span></h1>
 
     <main>
