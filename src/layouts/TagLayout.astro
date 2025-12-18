@@ -1,17 +1,17 @@
 ---
-import "../styles/global.css"
-import Footer from "../components/Footer.astro"
-import TopLink from "../components/TopLink.astro"
-import { SEO } from "astro-seo"
-import PTscript from "../components/PTscript.astro"
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import TopLink from "../components/TopLink.astro";
+import { SEO } from "astro-seo";
+import PTscript from "../components/PTscript.astro";
 
 interface Props {
-  pageTitle: string
-  h1Title: string
+  pageTitle: string;
+  h1Title: string;
 }
 
-const { pageTitle, h1Title } = Astro.props
-const myName = "Goran Solev"
+const { pageTitle, h1Title } = Astro.props;
+const myName = "Goran Solev";
 ---
 
 <html lang="en">
@@ -42,7 +42,12 @@ const myName = "Goran Solev"
   </head>
 
   <body class="mx-auto flex flex-col h-screen px-8">
-    <TopLink url="/" icon="carbon:arrow-left" text="goransolev.com" />
+    <TopLink
+      class="mt-24"
+      url="/"
+      icon="carbon:arrow-left"
+      text="goransolev.com"
+    />
     <main class="grow">
       <h1><span>{h1Title}</span></h1>
       <div>

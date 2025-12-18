@@ -1,11 +1,11 @@
 ---
-import { Icon } from "astro-icon"
+import { Icon } from "astro-icon";
 
-const { url, text } = Astro.props
+const { url, text, class: className = "" } = Astro.props;
 ---
 
-<p class="mt-24">
-  <a href={url} class="flex underline"
+<p>
+  <a href={url} class:list={["flex", "underline", "mb-4", className]}
     ><Icon name="carbon:arrow-left" class="w-[20px] mr-2" />{text}</a
   >
 </p>
