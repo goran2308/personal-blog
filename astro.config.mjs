@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     umami({
-      id: "97495836-129a-430e-af03-6d2ef6cb3b94",
+      id: "2ba962a7-c10f-44df-b5bf-8962c0133e29",
     }),
   ],
   site: "https://goransolev.com",

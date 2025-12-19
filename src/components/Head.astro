@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import UmamiScript from "./UmamiScript.astro";
 
 const { pageTitle } = Astro.props;
 const myName = "Goran Solev";
@@ -28,8 +29,5 @@ const myName = "Goran Solev";
     href="/icons/favicon-16x16.png"
   />
   <link rel="manifest" href="/site.webmanifest" />
-  <script
-    defer
-    src="http://192.168.0.13:3003/script.js"
-    data-website-id="97495836-129a-430e-af03-6d2ef6cb3b94"></script>
+  <UmamiScript />
 </head>

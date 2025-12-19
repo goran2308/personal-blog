@@ -1,7 +1,6 @@
 ---
 import Head from "../components/Head.astro";
 import Footer from "../components/Footer.astro";
-import Gtag2 from "../components/gtag2.astro";
 import "../styles/global.css";
 
 const { h1Title } = Astro.props;
@@ -10,7 +9,6 @@ const { h1Title } = Astro.props;
 <html lang="en">
   <Head pageTitle="Home" />
   <body class="mx-auto flex flex-col h-screen px-8">
-    <Gtag2 />
     <main class="grow mt-24">
       <h1><span>{h1Title}</span></h1>
       <div class="leading-[1.75rem]">

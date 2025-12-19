@@ -3,8 +3,8 @@ import BackToTop from "../components/BackToTop.astro";
 import Footer from "../components/Footer.astro";
 import TopLink from "../components/TopLink.astro";
 import { SEO } from "astro-seo";
-import Gtag2 from "../components/gtag2.astro";
 import "../styles/global.css";
+import UmamiScript from "../components/UmamiScript.astro";
 
 import { formatDate } from "../js/utils";
 
@@ -38,14 +38,10 @@ const topLinkClass = [...topLinkClasses];
       href="/icons/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
-    <script
-      defer
-      src="http://192.168.0.13:3003/script.js"
-      data-website-id="97495836-129a-430e-af03-6d2ef6cb3b94"></script>
+    <UmamiScript />
   </head>
 
   <body class="mx-auto flex flex-col h-screen px-8">
-    <Gtag2 />
     <TopLink class="mt-24" url="/all" arrow="←" text="All posts" />
     <h1><span>{frontmatter.title}</span></h1>
 
