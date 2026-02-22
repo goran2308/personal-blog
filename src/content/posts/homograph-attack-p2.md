@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'When Your “a” Is Actually a Russian Spy: The Real-World Horror Show (Part 2 of 3)'
 author: Goran Solev
-pubDate: 2025-12-17
+date: 2025-12-17
 description: 'Cybersecurity: Homograph Attack - Part 2'
 tags: ["cybersecurity"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 _Part 1 broke down the sneaky mechanics of homograph attacks. Now in Part 2, we dive into the real-world disasters—big brands, banks, and crypto projects that lost millions because one tiny letter was a wolf in sheep's clothing._

@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'When Your “a” Is Actually a Russian Spy: Your No-Nonsense Survival Guide (Part 3 of 3)'
 author: Goran Solev
-pubDate: 2025-12-23
+date: 2025-12-23
 description: 'Cybersecurity: Homograph Attack - Part 3'
 tags: ["cybersecurity"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 <style>

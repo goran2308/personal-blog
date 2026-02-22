@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: The importance of writing a semantic HTML
 author: Goran Solev
-pubDate: 2023-02-12
+date: 2023-02-12
 description: Explanation of how important the semantic HTML code is and all the benefits of doing it.
 tags: ["html"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 *If you are asking yourself do you need to learn HTML before anything else on your path to become a web developer, the only correct answer is **YES**!*

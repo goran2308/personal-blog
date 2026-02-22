@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Arrays in JavaScript
 author: Goran Solev
-pubDate: 2023-03-06
+date: 2023-03-06
 description: What are arrays in JavaScript? Learn how to manipulate the JavaScript arrays the right way!
 tags: ["javascript"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 *Arrays in JavaScript are defined as a collection of elements of any type. They are represented as a pair of square brackets [ ] and all the elements are comma (,) separated.*

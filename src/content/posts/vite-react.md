@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: You should use Vite for your React projects!
 author: Goran Solev
-pubDate: 2023-03-20
+date: 2023-03-20
 description: Vite will bring speed scaffolding in your project and realy quick development server response time.
 tags: ["tools"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 *Vite (the French word for "quick", pronounced /vit/, like "veet") is a build tool that aims to provide a faster and leaner development experience for modern web projects.* - Vite Docs

@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Fix "Insecure mixed content detected" on Netlify (Astro)
 author: Goran Solev
-pubDate: 2023-04-17
+date: 2023-04-17
 description: How to fix "Insecure mixed content detected" on Netlify (Astro)?
 tags: ["astro"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 _Recently I faced a problem using Netlify to host my Astro blog and website. I was getting this message in the logs that actually my website is served through http:// instead https:// protocol which was already activated. This is the fix I found that works for me. Hopefully, it will work for you too!_

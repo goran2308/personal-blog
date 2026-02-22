@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'When Your “a” Is Actually a Russian Spy: The Sneaky World of Homograph Attacks (Part 1 of 3)'
 author: Goran Solev
-pubDate: 2025-12-10
+date: 2025-12-10
 description: 'Cybersecurity: Homograph Attack - Part 1'
 tags: ["cybersecurity"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 <style>

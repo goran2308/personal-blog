@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: The Invisible Threats Lurking in Your Living Room (Yes, Even Your Fridge Is Sus)
 author: Goran Solev
-pubDate: 2025-12-30
+date: 2025-12-30
 description: The hidden dangers lurking in your smart home devices – from hacked baby monitors to fridges that could be a hacker's secret back door
 tags: ["cybersecurity"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 <style>

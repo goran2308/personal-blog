@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: What is Synchthing?
 author: Goran Solev
-pubDate: 2023-02-25
+date: 2023-02-25
 description: Sychthing and the benefits using it.
 tags: ["tools"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 *Syncthing is an open-source peer-to-peer file synchronization tool that you can use for syncing files between multiple devices (including an Android phone).*

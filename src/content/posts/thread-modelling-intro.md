@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Architecting Resilience: A Comprehensive Guide to Threat Modeling'
 author: Goran Solev
-pubDate: 2026-01-10
+date: 2026-01-10
 description: 'Threat modeling: map systems, spot risks with STRIDE/PASTA, and build secure apps proactively.'
 tags: ["cybersecurity"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 <style>

@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Automate builds with Netlify Build Hooks and GitHub Actions
 author: Goran Solev
-pubDate: 2023-04-03
+date: 2023-04-03
 description: How to use Netlify build hooks with GitHub Actions?
 tags: ["tools"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 _I'm hosting this website on <a href="https://app.netlify.com" target="_blank">Netlify</a>, and recently I found out about something called Build Hooks. What are they, and how to use them?_

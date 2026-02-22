@@ -1,11 +1,12 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Soft skills are important too!
 author: Goran Solev
-pubDate: 2023-05-01
+date: 2023-05-01
 description: How important are the soft skills for the developer and the company that hired him/her?
 tags: ["skills"]
 draft: false
+excerpt:
+thumbnail:
 ---
 
 _Have you ever asked yourself why some software developers with similar technical skills are more successful in finding jobs than others? I will try to make it clear in this article._
