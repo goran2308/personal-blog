@@ -4,6 +4,7 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
 import umami from "@yeskunall/astro-umami";
+import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,4 +15,7 @@ export default defineConfig({
     }),
   ],
   site: "https://goransolev.com",
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+  },
 });

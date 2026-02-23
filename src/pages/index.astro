@@ -3,6 +3,7 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 import BottomLink from "../components/BottomLink.astro";
 
 import { getCollection } from "astro:content";
+import { render } from "astro:content";
 
 const allPosts = await getCollection("posts", ({ data }) => !data.draft);
 
@@ -11,15 +12,41 @@ const latestPosts = allPosts
   .slice(0, 5);
 ---
 
-<DefaultLayout h1Title="Hi there!">
-  <p>
-    My name is Goran, the writer on this blog. This is just my personal journal
-    where I keep tutorials, recipes and other instructions that I need.
-  </p>
-  <br />
-  <p>I made it public because I believe that sharing is caring.</p>
-  <br />
-  <p>I publish a new post whenever I can. Stay tuned and follow my blog!</p>
+<DefaultLayout h1Title="Hi, I'm Goran 👋">
+  <section class="py-12 md:py-24 text-center md:text-left">
+    <div class="max-w-4xl mx-auto">
+      <p
+        class="text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto md:mx-0"
+      >
+        I write short, practical guides that actually help — cybersecurity
+        defenses, web dev tools that save time, smart home hardening, and
+        occasional no-nonsense cooking recipes.
+      </p>
+
+      <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto md:mx-0">
+        No fluff, no long stories — just useful stuff you can use today.
+      </p>
+
+      <!-- Strong CTAs – make them stand out -->
+      <div
+        class="flex flex-col sm:flex-row gap-5 justify-center md:justify-start"
+      >
+        <a
+          href="/posts"
+          class="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-lg py-4 px-10 rounded-lg shadow-md transition duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        >
+          See the latest guides →
+        </a>
+
+        <a
+          href="/all"
+          class="inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 font-medium text-lg py-4 px-10 rounded-lg shadow-md transition duration-200 border border-gray-300 dark:border-gray-600"
+        >
+          Browse all posts
+        </a>
+      </div>
+    </div>
+  </section>
 
   <div class="mt-[70px]">
     <h2 class="font-medium leading-tight">Latest:</h2>
@@ -32,31 +59,41 @@ const latestPosts = allPosts
       ) : (
         <table class="mt-4 w-full">
           <tbody>
-            {latestPosts.map((post) => (
-              <tr>
-                <td class="w-32">
-                  <code class="text-sm whitespace-normal p-1">
-                    {post.data.date.toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    })}
-                  </code>
-                </td>
+            {latestPosts.map(async (post) => {
+              const rendered = await render(post);
+              const readTime =
+                rendered.remarkPluginFrontmatter?.readTime || "-";
 
-                <td class="text-sm whitespace-normal px-4 hidden sm:table-cell">
-                  <a href={`/tags/${post.data.tags?.[0]}`}>
-                    {post.data.tags?.join(", ") || ""}
-                  </a>
-                </td>
+              return (
+                <tr>
+                  <td class="w-32">
+                    <code class="text-sm whitespace-normal p-1">
+                      {post.data.date.toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </code>
+                  </td>
 
-                <td class="py-1.5 pl-2">
-                  <a href={`/posts/${post.id}`} class="hover:underline">
-                    {post.data.title}
-                  </a>
-                </td>
-              </tr>
-            ))}
+                  <td class="text-sm whitespace-normal px-4 hidden sm:table-cell">
+                    <a href={`/tags/${post.data.tags?.[0]}`}>
+                      {post.data.tags?.join(", ") || ""}
+                    </a>
+                  </td>
+
+                  <td class="py-1.5 pl-2">
+                    <a href={`/posts/${post.id}`} class="hover:underline">
+                      {post.data.title}
+                    </a>
+                  </td>
+
+                  <td class="py-3 px-2 text-right text-sm whitespace-nowrap">
+                    {readTime}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       )

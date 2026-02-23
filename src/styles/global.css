@@ -140,3 +140,7 @@ button {
 button:hover {
   background-color: #173f5f;
 }
+
+section {
+  color: #0E273C;
+}

@@ -16,9 +16,9 @@ const posts = defineCollection({
     tags: z.array(z.string()).optional().default([]),
     description: z.string().optional(),
     draft: z.boolean().optional().default(false),
-    excerpt: z.string().nullish(), // Optional field for a short summary
-    thumbnail: z.string().nullish(), // e.g. "/thumbnails/my-post.jpg"
-    readTime: z.string().optional(),
+    excerpt: z.string().optional().nullish(), // Optional field for a short summary
+    thumbnail: z.string().optional().nullish(), // e.g. "/thumbnails/my-post.jpg"
+    readTime: z.string().optional().nullish(),
     // Add more fields as needed
   }),
 });
