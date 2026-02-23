@@ -1,15 +1,14 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
-import BlogPost from "../components/BlogPost.astro";
 import BottomLink from "../components/BottomLink.astro";
 
-import { formatDate, formatBlogPosts } from "../js/utils";
+import { getCollection } from "astro:content";
 
-const allPosts = await import.meta.glob("../pages/posts/*.md");
+const allPosts = await getCollection("posts", ({ data }) => !data.draft);
 
-const formattedPosts = await formatBlogPosts(allPosts, {
-  limit: 5,
-});
+const latestPosts = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
 ---
 
 <DefaultLayout h1Title="Hi there!">
@@ -24,20 +23,44 @@ const formattedPosts = await formatBlogPosts(allPosts, {
 
   <div class="mt-[70px]">
     <h2 class="font-medium leading-tight">Latest:</h2>
-    <table>
-      <tbody>
-        {
-          formattedPosts.map((post) => (
-            <BlogPost
-              url={post.url}
-              title={post.frontmatter.title}
-              date={formatDate(post.frontmatter.pubDate)}
-              tag={post.frontmatter.tags}
-            />
-          ))
-        }
-      </tbody>
-    </table>
+
+    {
+      latestPosts.length === 0 ? (
+        <p class="mt-6 text-gray-600 dark:text-gray-400">
+          No posts found yet. Make sure src/content/posts/ contains .md files.
+        </p>
+      ) : (
+        <table class="mt-4 w-full">
+          <tbody>
+            {latestPosts.map((post) => (
+              <tr>
+                <td class="w-32">
+                  <code class="text-sm whitespace-normal p-1">
+                    {post.data.date.toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </code>
+                </td>
+
+                <td class="text-sm whitespace-normal px-4 hidden sm:table-cell">
+                  <a href={`/tags/${post.data.tags?.[0]}`}>
+                    {post.data.tags?.join(", ") || ""}
+                  </a>
+                </td>
+
+                <td class="py-1.5 pl-2">
+                  <a href={`/posts/${post.id}`} class="hover:underline">
+                    {post.data.title}
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )
+    }
   </div>
   <BottomLink url="/all" text="All posts" />
 </DefaultLayout>
