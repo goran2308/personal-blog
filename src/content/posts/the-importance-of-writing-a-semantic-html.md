@@ -5,7 +5,7 @@ date: 2023-02-12
 description: Explanation of how important the semantic HTML code is and all the benefits of doing it.
 tags: ["html"]
 draft: false
-excerpt:
+excerpt: "Semantic HTML isn't just accessibility checkbox — it improves SEO, maintainability, screen-reader experience, and future-proofs your markup."
 thumbnail:
 ---
 

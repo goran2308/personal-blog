@@ -5,7 +5,7 @@ date: 2025-12-17
 description: 'Cybersecurity: Homograph Attack - Part 2'
 tags: ["cybersecurity"]
 draft: false
-excerpt:
+excerpt: "Real-world examples of homograph attacks in the wild — from phishing campaigns to cryptocurrency scams — showing exactly how damaging they can be."
 thumbnail:
 ---
 

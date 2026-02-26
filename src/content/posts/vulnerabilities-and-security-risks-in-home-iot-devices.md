@@ -5,7 +5,7 @@ date: 2025-12-30
 description: The hidden dangers lurking in your smart home devices – from hacked baby monitors to fridges that could be a hacker's secret back door
 tags: ["cybersecurity"]
 draft: false
-excerpt:
+excerpt: "Your smart fridge, camera, and doorbell are probably more dangerous than you think — here's what real risks look like and how to lock them down fast."
 thumbnail:
 ---
 

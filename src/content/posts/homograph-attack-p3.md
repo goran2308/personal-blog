@@ -5,7 +5,7 @@ date: 2025-12-23
 description: 'Cybersecurity: Homograph Attack - Part 3'
 tags: ["cybersecurity"]
 draft: false
-excerpt:
+excerpt: "Practical defense guide: how to detect homograph domains, protect users in browsers, and stop these sneaky attacks before they reach your inbox or wallet."
 thumbnail:
 ---
 

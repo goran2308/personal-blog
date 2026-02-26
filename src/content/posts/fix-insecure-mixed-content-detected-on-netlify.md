@@ -5,7 +5,7 @@ date: 2023-04-17
 description: How to fix "Insecure mixed content detected" on Netlify (Astro)?
 tags: ["astro"]
 draft: false
-excerpt:
+excerpt: "Quick fix for the annoying 'Insecure mixed content detected' warning on Netlify-hosted Astro sites — update config and force HTTPS everywhere."
 thumbnail:
 ---
 

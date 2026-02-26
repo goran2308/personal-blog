@@ -5,7 +5,7 @@ date: 2026-01-10
 description: 'Threat modeling: map systems, spot risks with STRIDE/PASTA, and build secure apps proactively.'
 tags: ["cybersecurity"]
 draft: false
-excerpt:
+excerpt: "Learn why threat modeling is essential, how to do it step-by-step, and which frameworks help build more resilient systems without overcomplicating your process."
 thumbnail:
 ---
 

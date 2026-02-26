@@ -5,7 +5,7 @@ date: 2023-02-25
 description: Sychthing and the benefits using it.
 tags: ["tools"]
 draft: false
-excerpt:
+excerpt: "Syncthing explained: secure, private, peer-to-peer file sync that works better than Dropbox for many use cases — setup, benefits, and gotchas."
 thumbnail:
 ---
 

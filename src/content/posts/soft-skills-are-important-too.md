@@ -5,7 +5,7 @@ date: 2023-05-01
 description: How important are the soft skills for the developer and the company that hired him/her?
 tags: ["skills"]
 draft: false
-excerpt:
+excerpt: "Technical skills get you the job, but soft skills keep it — why communication, empathy, and collaboration matter more than most engineers admit."
 thumbnail:
 ---
 

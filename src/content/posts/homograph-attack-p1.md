@@ -5,7 +5,7 @@ date: 2025-12-10
 description: 'Cybersecurity: Homograph Attack - Part 1'
 tags: ["cybersecurity"]
 draft: false
-excerpt:
+excerpt: "Homograph attacks turn 'a' into a weapon — the first part explains how cybercriminals create visually identical domains to steal credentials and bypass filters."
 thumbnail:
 ---
 

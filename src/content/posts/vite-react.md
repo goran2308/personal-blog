@@ -5,7 +5,7 @@ date: 2023-03-20
 description: Vite will bring speed scaffolding in your project and realy quick development server response time.
 tags: ["tools"]
 draft: false
-excerpt:
+excerpt: "Why Vite beats Create React App for modern React projects: instant server start, lightning HMR, smaller bundles, and better developer experience."
 thumbnail:
 ---
 

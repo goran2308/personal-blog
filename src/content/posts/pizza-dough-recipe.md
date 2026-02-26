@@ -5,7 +5,7 @@ date: 2025-02-15
 description: This is my favourite pizza dough recipe of all times that I make almost every weekend for me and my family.
 tags: ["cooking"]
 draft: false
-excerpt:
+excerpt: "Reliable homemade pizza dough recipe that rises perfectly every time — simple ingredients, clear steps, and tips for crispy crust."
 thumbnail:
 ---
 

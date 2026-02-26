@@ -5,7 +5,7 @@ date: 2023-03-06
 description: What are arrays in JavaScript? Learn how to manipulate the JavaScript arrays the right way!
 tags: ["javascript"]
 draft: false
-excerpt:
+excerpt: "Practical guide to JavaScript arrays: useful methods, common patterns, performance tips, and how to avoid the most frequent mistakes."
 thumbnail:
 ---
 

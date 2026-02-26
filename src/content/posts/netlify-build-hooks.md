@@ -5,7 +5,7 @@ date: 2023-04-03
 description: How to use Netlify build hooks with GitHub Actions?
 tags: ["tools"]
 draft: false
-excerpt:
+excerpt: "Automate your Netlify builds with GitHub Actions and build hooks — trigger previews, deployments, and notifications exactly when you need them."
 thumbnail:
 ---
 
