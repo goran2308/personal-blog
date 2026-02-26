@@ -8,27 +8,22 @@ const allPosts = await getCollection("posts", ({ data }) => !data.draft);
 
 const latestPosts = allPosts
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 5);
+  .slice(0, 6);
 ---
 
 <DefaultLayout h1Title="Hi, I'm Goran 👋">
-  <section class="py-6 md:py-6 text-center md:text-left">
+  <!-- Narrow intro – unchanged width -->
+  <section class="py-16 md:py-24 px-6 text-center md:text-left bg-white dark:bg-gray-900">
     <div class="max-w-4xl mx-auto">
-      <p
-        class="text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto md:mx-0"
-      >
-        I write short, practical guides that actually help — cybersecurity
-        defenses, web dev tools that save time, smart home hardening, and
-        occasional no-nonsense cooking recipes.
+      <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto md:mx-0 text-goran-dark">
+        I write short, practical guides that actually help — cybersecurity defenses, web dev tools that save time, smart home hardening, and occasional no-nonsense cooking recipes.
       </p>
 
-      <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto md:mx-0">
+      <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto md:mx-0 text-goran-dark">
         No fluff, no long stories — just useful stuff you can use today.
       </p>
 
-      <div
-        class="flex flex-col sm:flex-row gap-5 justify-center md:justify-start"
-      >
+      <div class="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
         <a
           href="/posts"
           class="inline-flex items-center justify-center bg-goran-dark hover:bg-goran-dark-hover text-white font-medium text-lg py-4 px-10 rounded-lg shadow-md transition duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-goran-accent focus:ring-offset-2"
@@ -46,66 +41,71 @@ const latestPosts = allPosts
     </div>
   </section>
 
-<div class="mt-16">
-  <h2 class="font-medium leading-tight text-3xl mb-10 text-center md:text-left">
-    Latest Guides
-  </h2>
+  <!-- Wider card section – stronger breakout from body px-8 -->
+  <section class="py-16 px-6 bg-gray-50 dark:bg-gray-900">
+    <!-- Negative margins to cancel body px-8 + wider internal padding -->
+    <div class="-mx-8 sm:-mx-12 md:-mx-16 lg:-mx-24 xl:-mx-32 2xl:-mx-40 max-w-screen-2xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 2xl:px-40">
+      <h2 class="font-medium leading-tight text-3xl mb-10 text-center md:text-left text-goran-dark">
+        Latest Guides
+      </h2>
 
-  {latestPosts.length === 0 ? (
-    <p class="text-center text-lg text-gray-600 dark:text-gray-400">
-      No posts found yet.
-    </p>
-  ) : (
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {latestPosts.map(async (post) => {
-        const rendered = await render(post);
-        const readTime = rendered.remarkPluginFrontmatter?.readTime || '—';
+      {latestPosts.length === 0 ? (
+        <p class="text-center text-lg text-gray-600 dark:text-gray-400">
+          No posts found yet.
+        </p>
+      ) : (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10">
+          {latestPosts.slice(0, 6).map(async (post) => {  <!-- changed to 6 posts -->
+            const rendered = await render(post);
+            const readTime = rendered.remarkPluginFrontmatter?.readTime || '—';
 
-        return (
-          <a
-            href={`/posts/${post.id}`}
-            class="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 flex flex-col h-full"
-          >
-            <!-- Thumbnail (optional – add when ready) -->
-            {post.data.thumbnail ? (
-              <img
-                src={post.data.thumbnail}
-                alt={post.data.title}
-                class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            ) : (
-              <div class="w-full h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 text-sm">
-                No image yet
-              </div>
-            )}
-
-            <div class="p-6 flex flex-col flex-grow">
-              <h3 class="text-xl font-semibold mb-3 group-hover:text-goran-accent transition-colors">
-                {post.data.title}
-              </h3>
-
-              <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 flex-grow">
-                {post.data.excerpt || post.data.description || 'Read the guide...'}
-              </p>
-
-              <div class="text-sm text-gray-500 dark:text-gray-400 mt-auto flex flex-wrap gap-3">
-                <time>
-                  {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-                </time>
-                <span>·</span>
-                <span>{readTime}</span>
-                {post.data.tags?.length > 0 && (
-                  <span>· {post.data.tags.join(' • ')}</span>
+            return (
+              <a
+                href={`/posts/${post.id}`}
+                class="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 flex flex-col h-full"
+              >
+                <!-- Thumbnail – taller for wider feel -->
+                {post.data.thumbnail ? (
+                  <img
+                    src={post.data.thumbnail}
+                    alt={post.data.title}
+                    class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div class="w-full h-56 bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 text-sm">
+                    No image yet
+                  </div>
                 )}
-              </div>
-            </div>
-          </a>
-        );
-      })}
-    </div>
-  )}
 
-  <div class="text-center mt-12">
-    <BottomLink url="/all" text="All posts →" />
-  </div>
-</div></DefaultLayout>
+                <div class="p-6 flex flex-col flex-grow">
+                  <h3 class="text-xl font-semibold mb-3 group-hover:text-goran-accent transition-colors line-clamp-2">
+                    {post.data.title}
+                  </h3>
+
+                  <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 flex-grow">
+                    {post.data.excerpt || post.data.description || 'Read the guide...'}
+                  </p>
+
+                  <div class="text-sm text-gray-500 dark:text-gray-400 mt-auto flex flex-wrap gap-3">
+                    <time>
+                      {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                    </time>
+                    <span>·</span>
+                    <span>{readTime}</span>
+                    {post.data.tags?.length > 0 && (
+                      <span>· {post.data.tags.join(' • ')}</span>
+                    )}
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      )}
+
+      <div class="text-center mt-12">
+        <BottomLink url="/all" text="All posts →" />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
